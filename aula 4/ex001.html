@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
+    <h1>Olá, Mundo!</h1>
+    <p id="texto-digitado"></p>
+
     
 </body>
+<script>        window.alert('Isso é um alerta!');
+    if (window.confirm('Você vai digitar um texto agora!')) {
+        const userInput = window.prompt('Digite o texto:');
+        if (userInput !== null) {
+            document.getElementById('texto-digitado').textContent = `Texto digitado: ${userInput}`;
+        }
+    } else {
+        console.log('Usuário cancelou a ação.');
+        document.getElementById('texto-digitado').textContent = `Você cancelou a ação. Aperte F5 para recomeçar.`;
+    }
+</script>
 </html>
